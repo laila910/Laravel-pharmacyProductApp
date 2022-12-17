@@ -30,10 +30,10 @@
   2. Above the list of files, click Code button and copy the https link.
   3. Go to your visual studio code editor then open the terminal and write this command git clone with https linK.
   4. Copy .env.example file to .env on the root folder. You can type copy .env.example .env if using command prompt Windows or cp .env.example .env if using terminal, Ubuntu.
-  5. Open your .env file and change the database name to `pharmacy`, username (DB_USERNAME) and password (DB_PASSWORD) field correspond to your configuration.
-  6. open Mysql Host and create Database with `pharmacy` with your above configuration.
+  5. Open your .env file and change the database name to `pharmacydb`, username (DB_USERNAME) and password (DB_PASSWORD) field correspond to your configuration.
+  6. open Mysql Host and create Database with `pharmacydb` with your above configuration.
   6. Run `composer install`
   6. Run `php artisan key:generate`
   7. Run `php artisan migrate`
-  8. Run `php artsian db:seed`
-  9. Run `Run php artisan serve` and start Manage products & pharmacies in Pharmacy App :) 
+  8. Run `php artisan db:seed` if you want to make atest on some faker data :)
+  9. Run `php artisan serve` and start Manage products & pharmacies in Pharmacy App :) 
