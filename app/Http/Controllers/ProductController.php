@@ -64,8 +64,7 @@ class ProductController extends Controller
         }else{
             $image=null;
         }
-    //    if($request->admin){ $admin=1;}else{$admin=0;}
-    //    if($request->address){$address=$request->address;}else{$address=null;}
+
         Product::create([
             'title'=>$request->title,
             'description'=>$request->description,
@@ -105,12 +104,6 @@ class ProductController extends Controller
          return redirect()->route('products.dashboard')->with('success','Successfully Added PharmacyPrice To This Product');
          
     }
-
-    // public function StoreNewPrice(Request $request,Product $product){
-      
-
-    // }
-
 
     /**
      * Show the form for editing the specified resource.

@@ -21,8 +21,6 @@ class ProductApiController extends Controller
      */
     public function index(Request $request)
     {
-   
-    
         $filter=new ProductQuery();
         $queryItems=$filter->transform($request);
         if(count($queryItems)==0){
@@ -31,7 +29,6 @@ class ProductApiController extends Controller
         else{
             return ProductsResource::collection(Product::where($queryItems)->paginate());
         }
-        // return ProductResource::collection(Product::all());
     }
 
     /**
@@ -74,7 +71,6 @@ class ProductApiController extends Controller
             ['price'=>$request->price,'quantity'=>$request->quantity
         ]);
         return 'Successfully created Or Updated Product Price';
-  
     }
     /**
      * Display the specified resource.
@@ -84,12 +80,9 @@ class ProductApiController extends Controller
      */
     public function show(Product $product)
     {
-      
-        $arr=array();
-
         $product->load(['pharmacies']);
         $pharmacies=$product->pharmacies;
-   
+        $arr=array();
         $product_id=$product->id;
         $productPharmacies=ProductPharmacy::where('product_id','=',$product_id)->get('price');
      
@@ -101,9 +94,7 @@ class ProductApiController extends Controller
         }
         $product->extra=(object) ['arr'=>$arr];
 
-         return new ProductResource($product);
-       
-     
+         return new ProductResource($product);  
     }
 
     /**

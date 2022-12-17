@@ -21,13 +21,6 @@
                     <li>
                         <strong>Date Added: </strong>{{$product->pretty_created}}
                     </li>
-                    {{-- <li>
-                        @if($user->admin==1)
-                          <strong>Admin</strong>
-                        @else
-                          <strong>Employee</strong>
-                        @endif
-                    </li> --}}
                     <li>
                         <strong>Product Description:</strong> {{$product->description}} 
                     </li>
@@ -69,9 +62,7 @@
                       <button type="button" class="dropdown-item btn btn-primary" data-toggle="modal" data-target="#PriceModal">
                         Add New Price of Pharmacy
                       </button> 
-                      {{-- @if(Auth::user()->admin ==1 || Auth::user()->id == $user->id)
-                      <a class="dropdown-item" data-toggle='modal' data-target='#ChangePassword'>Change Password</a>
-                      @endif --}}
+                    
                       <div class="dropdown-divider"></div>
                       <a href="#" class="dropdown-item text-danger" onclick="deleteProduct()">Delete Product</a> 
                       <form action="{{route('products.delete',$product->id)}}" id="delete-product-form" method='POST' style='display:none'>
@@ -117,10 +108,7 @@
               </select>
             </div>
 
-                {{-- <div class="form-group">
-                  <label for="exampleFormControlImage">Product Image</label>
-                  <input type="file" class="form-control-file" id="exampleFormControlImage" name='image'>
-                </div> --}}
+              
 
                 <button type="submit" class="btn btn-primary">Create Product</button>
           </form>

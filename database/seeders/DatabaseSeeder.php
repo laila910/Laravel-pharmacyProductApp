@@ -16,21 +16,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
-
-
-
-       
-
-    $this->call([
-       ProductSeeder::class
-    ]);
-    $this->call([
-        PharmacySeeder::class
-    ]);
-    $this->call([
-        ProductPharmacySeeder::class
-    ]);
+       $this->call([
+          ProductSeeder::class
+      ]);
+        $this->call([
+           PharmacySeeder::class
+        ]);
+         $this->call([
+            ProductPharmacySeeder::class
+        ]);
    
 
  

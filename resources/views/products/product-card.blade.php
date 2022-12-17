@@ -20,16 +20,7 @@
                     <li>
                         <strong>Product Description: </strong>{{$product->description}}
                     </li>
-                    {{-- <li>
-                        @if($user->admin==1)
-                          <strong>Admin</strong>
-                        @else
-                          <strong>Employee</strong>
-                        @endif
-                    </li> --}}
-                    {{-- <li>
-                        <strong>Address</strong>@if($user->address) {{$user->address}} @else ... @endif
-                    </li> --}}
+                  
                 </ul>
             </div>
             <div class="col-sm-3">
@@ -40,13 +31,9 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="{{route('products.edit',['product'=>$product->id])}}">Edit Product</a>
                       <a class="dropdown-item" href="{{route('products.show',['product'=>$product->id])}}">View Product</a>
-                      {{-- <a class="dropdown-item" href="{{route('products.addPrice',['product'=>$product->id])}}">Add Price of Pharmacy</a> --}}
                       <button type="button" class="dropdown-item btn btn-primary" data-toggle="modal" data-target="#PriceModal">
                         Add New Price of Pharmacy
                       </button> 
-                      {{-- @if(Auth::user()->admin ==1 || Auth::user()->id == $user->id)
-                      <a class="dropdown-item" data-toggle='modal' data-target='#ChangePassword'>Change Password</a>
-                      @endif --}}
                       <div class="dropdown-divider"></div>
                       <a href="#" class="dropdown-item text-danger" onclick="deleteProduct()">Delete Product</a> 
                       <form action="{{route('products.delete',$product->id)}}" id="delete-product-form" method='POST' style='display:none'>
@@ -91,11 +78,7 @@
               </select>
             </div>
 
-                {{-- <div class="form-group">
-                  <label for="exampleFormControlImage">Product Image</label>
-                  <input type="file" class="form-control-file" id="exampleFormControlImage" name='image'>
-                </div> --}}
-
+          
                 <button type="submit" class="btn btn-primary">Create Product</button>
           </form>
       </div>

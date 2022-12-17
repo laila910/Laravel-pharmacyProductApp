@@ -6,8 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreAndUpdatePharmacyRequest;
 use App\Http\Resources\V1\PharmacyResource;
 use App\Models\Pharmacy;
-use App\Models\Product;
-use Illuminate\Http\Request;
+
 
 class PharmacyApiController extends Controller
 {

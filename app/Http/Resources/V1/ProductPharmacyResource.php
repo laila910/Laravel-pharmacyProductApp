@@ -20,7 +20,6 @@ class ProductPharmacyResource extends JsonResource
             'Pharmacy Id'=>$this->pharmacy_id,
             'Product Price'=>$this->price,
             'Product Quantity'=>$this->quantity,
-            // 'info'=>ProductPharmacyResource::collection($this->pharmacies),
         ];
     }
 }

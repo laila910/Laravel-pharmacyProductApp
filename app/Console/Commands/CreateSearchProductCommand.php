@@ -41,29 +41,10 @@ class CreateSearchProductCommand extends Command
      */
     public function handle()
     {
-        // $product_id=$this->ask('What is the product Id?');
 
-$product =$this->arguments('product');
+    //  $product =$this->arguments('product');
         
-print_r($product['product']);
-
-        // $headers=['id','name','price'];
-        // foreach ($product->pharmacies() as $pharmacy ) {
-        //     echo $pharmacy->name;
-        // }
-        // $products=ProductPharmacy::where('product_id','=',$product_id)->get();
-        // $pharmacy_name=Pharmacy::find($products->pharmacy->id);
-        // $arr=[];
-        // array_push($arr,[
-        //     'pharmacy_id'=>$product->pharmacy_id,
-        //     'pharmacyName'=>$pharmacy_name,
-        //     'ProductPrice'=>$products->price
-        // ]);
-
-// $data='';
-        // print_r($arr);
-        //toJson();
-        // $this->table($headers,$data);
+    //  print_r($product['product']);
 
     }
 }

@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Requests\StoreAndUpdatePharmacyRequest;
 use App\Models\Pharmacy;
-use Illuminate\Http\Request;
-use Phar;
+
 
 class PharmacyController extends Controller
 {
@@ -15,9 +14,6 @@ class PharmacyController extends Controller
      */
     public function index()
     {
-        // $allUsers=User::all();
-        // $allRecords=Record::all();
-        // return view('customers.index',['customers'=>Customer::latest()->paginate(20),'allUsers'=>$allUsers,'allRecords'=>$allRecords]);
      return view('pharmacies.index',['pharmacies'=>Pharmacy::latest()->paginate(20)]);
 
     }
@@ -101,15 +97,4 @@ class PharmacyController extends Controller
 
         return redirect()->route('pharmacies.dashboard')->with('success','Successfuly deleted Pharmacy And All assets related to');
     }
-    // public function addRecordAction(StoreAndUpdateRecordRequest $request){
-         
-    //     Record::create([
-    //        'status'=>$request->status,
-    //        'notes'=>$request->notes,
-    //        'customer_id'=>$request->customer_id
-    //     ]);
-    //     return redirect()->route('customers.dashboard')->with('success','Successfully created a New Record To This Customer');
-
-
-    // }
 }

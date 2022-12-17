@@ -24,7 +24,7 @@
  7. Complete All Coding Until Finish :)
 
 
-# Steps To Run This CRM:
+# Steps To Run This Pharmacy:
   To clone the project you must follow the following steps:
   1. Navigate to the main page of the repository.
   2. Above the list of files, click Code button and copy the https link.

@@ -15,12 +15,3 @@ Route::group(['prefix'=>'v1','namespace'=>'App\Http\Controllers\Api\V1'],functio
     Route::post('add-UpdateProductPrice',['uses'=>'ProductApiController@addOrUpdateProductPriceWithPharmacy']);
 
 });
-
-// products
-// Route::get('v1/products', [ProductApiController::class, 'index']);
-// Route::get('categories', [ProductController::class, 'category']);
-// Route::post('/products', [ProductController::class, 'store'])->name('products.store');
-// Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
-// Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
-// Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
-// Route::get('/catProducts',[ProductController::class,'catProducts'])->name('products.catProducts');

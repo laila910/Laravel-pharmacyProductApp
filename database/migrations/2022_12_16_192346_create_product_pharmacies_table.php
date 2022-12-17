@@ -17,8 +17,8 @@ class CreateProductPharmaciesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('pharmacy_id');
-            $table->decimal('price', 9, 3)->default(rand(20,5000));
-            $table->bigInteger('quantity')->default(rand(30,900));
+            $table->decimal('price', 9, 3)->default(rand('10','1000'));
+            $table->bigInteger('quantity')->default(rand('30','90'));
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->foreign('pharmacy_id')->references('id')->on('pharmacies')->onDelete('cascade');
             $table->timestamps();

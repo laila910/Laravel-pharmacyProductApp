@@ -12,19 +12,15 @@ class ProductPharmacy extends Model
     protected $table='product_pharmacies';
 
     protected $fillable=['product_id','pharmacy_id','price','quantity'];
+//     public function product()
+// {
+//     return $this->belongsTo('App\Product');
+// }
 
-    // public function products(){
-    //     return $this->belongsToMany(Product::class,'product_pharmacies','product_id','id');
-    // }
-    public function product()
-{
-    return $this->belongsTo('App\Product');
-}
-
-public function pharmacy()
-{
-    return $this->belongsTo('App\Pharmacy');
-}
+// public function pharmacy()
+// {
+//     return $this->belongsTo('App\Pharmacy');
+// }
 
   
 }

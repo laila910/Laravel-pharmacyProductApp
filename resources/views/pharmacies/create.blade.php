@@ -44,22 +44,6 @@
                     <label for="exampleInputAddress">Address</label>
                     <input type="text" class="form-control" id="exampleInputAddress"  name='address' placeholder="Enter Pharmacy Address">
                   </div>
-                  
-                  {{-- <div class='form-group mb-3'>
-                   <label for="exampleFormControlAssignedTo">Assigned To </label>
-                   <select class="form-control" id="exampleInputAssignedTo" name="user_id" placeholder="Customer Assigned To">
-                 
-                      @if($userLogin)
-                       <option value="{{$userLogin->id}}" selected>{{$userLogin->name}}</option>
-                      @endif
-                      @foreach ($allUsers as $user)
-                        @if($userLogin->id != $user->id)
-                          <option value="{{$user->id}}">{{$user->name}}</option>
-                        @endif
-                      @endforeach
-                </select>
-                   
-                  </div> --}}
                   <button type="submit" class="btn btn-primary float-right">Create Pharmacy</button>
             </form>
             

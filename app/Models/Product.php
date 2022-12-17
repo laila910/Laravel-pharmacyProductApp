@@ -22,11 +22,11 @@ class Product extends Model
         return $this->belongsToMany(Pharmacy::class,'product_pharmacies')->limit(5)->orderby('price');
     }
     public function pharmacies(){
-    return $this->belongsToMany(Pharmacy::class, 'product_pharmacies');
-   }
+      return $this->belongsToMany(Pharmacy::class, 'product_pharmacies');
+    }
    
    public function pharmaciesrel(){
-    return $this->limitpharmacies();
+        return $this->limitpharmacies();
    }
 
  
